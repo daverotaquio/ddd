@@ -48,7 +48,7 @@ namespace TradingEngine.Requests.Commands
 
             Currency currency = _currencyRepository.GetAll(x => x.Key == request.CurrencyKey).FirstOrDefault();
 
-            currency.MustNotBeNull(ex: new CurrencyNotFoundException("Currency not found."));
+            currency.MustNotBeNull(ex: new CurrencyNotFoundException(ExceptionMessage.CurrencyNotFoundExceptionMessage));
 
             Wallet wallet = _walletRepository.GetAll(x => x.UserId == Auth.Instance.LoggedInUserId).FirstOrDefault();
 

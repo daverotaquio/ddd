@@ -34,7 +34,7 @@ namespace TradingEngine.Domain.UserDomain.Events
             _userRepository = userRepository;
         }
 
-        public Task Handle(DepositedMoney notification, CancellationToken cancellationToken)
+        public async Task Handle(DepositedMoney notification, CancellationToken cancellationToken)
         {
             Wallet wallet = _walletRepository.GetById(notification.EntityId);
 
@@ -56,9 +56,7 @@ namespace TradingEngine.Domain.UserDomain.Events
 
             _accountHistoryRepository.Add(accountHistory);
 
-            _accountHistoryRepository.SaveChanges(cancellationToken);
-
-            return Task.CompletedTask;
+            await _accountHistoryRepository.SaveChanges(cancellationToken);
         }
     }
 }

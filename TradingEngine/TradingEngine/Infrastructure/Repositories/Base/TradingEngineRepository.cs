@@ -44,11 +44,6 @@ namespace TradingEngine.Infrastructure.Repositories.Base
 
             query = includeProperties.Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
 
-            //foreach (Expression<Func<TEntity, object>> includeProperty in includeProperties)
-            //{
-            //    query = query.Include(includeProperty);
-            //}
-
             if (orderBy != null)
                 query = orderBy(query);
 

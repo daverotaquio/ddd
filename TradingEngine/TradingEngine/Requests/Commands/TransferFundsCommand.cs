@@ -66,7 +66,7 @@ namespace TradingEngine.Requests.Commands
             fromWallet.WalletId.Value.Must(x => x != toWallet.WalletId.Value, ex: new InvalidOperationException("Cannot transfer on the same wallet."));
 
             Currency currency = _currencyRepository.GetAll(x => x.Key == request.CurrencyKey).FirstOrDefault();
-            currency.MustNotBeNull(ex: new CurrencyNotFoundException("Currency not found."));
+            currency.MustNotBeNull(ex: new CurrencyNotFoundException(ExceptionMessage.CurrencyNotFoundExceptionMessage));
 
             var money = new Money(request.Amount);
 

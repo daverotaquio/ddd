@@ -34,12 +34,8 @@ namespace TradingEngine.Domain.UserDomain.Events
             _userRepository = userRepository;
         }
 
-        public Task Handle(WithdrewMoney notification, CancellationToken cancellationToken)
+        public async Task Handle(WithdrewMoney notification, CancellationToken cancellationToken)
         {
-            //Currency currency = _currencyRepository.GetAll(x => x.Key == notification.CurrencyKey).FirstOrDefault();
-
-            //currency.MustNotBeNull(ex: new CurrencyNotFoundException("Currency not found."));
-
             Wallet wallet = _walletRepository.GetById(notification.EntityId);
 
             User user = _userRepository.GetById(notification.UserId);
@@ -60,9 +56,7 @@ namespace TradingEngine.Domain.UserDomain.Events
 
             _accountHistoryRepository.Add(accountHistory);
 
-            _accountHistoryRepository.SaveChanges(cancellationToken);
-
-            return Task.CompletedTask;
+            await _accountHistoryRepository.SaveChanges(cancellationToken);
         }
     }
 }

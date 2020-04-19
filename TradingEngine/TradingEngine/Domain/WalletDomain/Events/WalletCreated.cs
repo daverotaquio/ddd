@@ -44,8 +44,6 @@ namespace TradingEngine.Domain.WalletDomain.Events
             _accountHistoryRepository.Add(accountHistory);
 
             await _accountHistoryRepository.SaveChanges(cancellationToken);
-
-            await Task.CompletedTask;
         }
     }
 }
