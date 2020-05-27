@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using TradingEngine.Infrastructure;
 
-namespace TradingEngine.Domain.ValueObjects
+namespace TradingEngine.Models.ValueObjects
 {
     public class Money : ValueObject<Money>
     {

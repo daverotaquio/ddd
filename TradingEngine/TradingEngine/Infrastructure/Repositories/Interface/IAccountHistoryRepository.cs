@@ -1,5 +1,5 @@
-﻿using TradingEngine.Entities.AccountHistoryEntity;
-using TradingEngine.Infrastructure.Repositories.Interface.Base;
+﻿using TradingEngine.Infrastructure.Repositories.Interface.Base;
+using TradingEngine.Models.AccountHistoryEntity;
 
 namespace TradingEngine.Infrastructure.Repositories.Interface
 {

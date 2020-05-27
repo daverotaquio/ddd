@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using TradingEngine.Domain.Seedwork;
-using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Entities.AccountHistoryEntity;
-using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Infrastructure;
+using TradingEngine.Models.AccountHistoryEntity;
+using TradingEngine.Models.Seedwork;
+using TradingEngine.Models.ValueObjects;
+using TradingEngine.Models.WalletEntity;
 
-namespace TradingEngine.Entities.UserEntity
+namespace TradingEngine.Models.UserEntity
 {
     public class User : Entity, IAggregateRoot
     {

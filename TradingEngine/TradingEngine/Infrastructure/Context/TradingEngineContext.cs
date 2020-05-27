@@ -3,12 +3,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using TradingEngine.Entities.AccountHistoryEntity;
-using TradingEngine.Entities.CurrencyEntity;
-using TradingEngine.Entities.UserEntity;
-using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Extensions;
 using TradingEngine.Infrastructure.EntityTypeConfigurations;
+using TradingEngine.Models.AccountHistoryEntity;
+using TradingEngine.Models.CurrencyEntity;
+using TradingEngine.Models.UserEntity;
+using TradingEngine.Models.WalletEntity;
 
 namespace TradingEngine.Infrastructure.Context
 {

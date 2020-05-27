@@ -1,7 +1,7 @@
-﻿using TradingEngine.Entities.WalletEntity;
-using TradingEngine.Infrastructure.Context;
+﻿using TradingEngine.Infrastructure.Context;
 using TradingEngine.Infrastructure.Repositories.Base;
 using TradingEngine.Infrastructure.Repositories.Interface;
+using TradingEngine.Models.WalletEntity;
 
 namespace TradingEngine.Infrastructure.Repositories
 {

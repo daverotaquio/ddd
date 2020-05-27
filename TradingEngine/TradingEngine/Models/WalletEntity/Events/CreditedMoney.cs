@@ -3,15 +3,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
-using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Entities.AccountHistoryEntity;
-using TradingEngine.Entities.CurrencyEntity;
-using TradingEngine.Entities.UserEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure;
 using TradingEngine.Infrastructure.Repositories.Interface;
+using TradingEngine.Models.AccountHistoryEntity;
+using TradingEngine.Models.CurrencyEntity;
+using TradingEngine.Models.UserEntity;
+using TradingEngine.Models.ValueObjects;
 
-namespace TradingEngine.Entities.WalletEntity.Events
+namespace TradingEngine.Models.WalletEntity.Events
 {
     public class CreditedMoney : Event
     {

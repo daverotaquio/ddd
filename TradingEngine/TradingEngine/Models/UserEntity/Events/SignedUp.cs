@@ -1,6 +1,6 @@
 ﻿using TradingEngine.Infrastructure;
 
-namespace TradingEngine.Entities.UserEntity.Events
+namespace TradingEngine.Models.UserEntity.Events
 {
     public class SignedUp : Event
     {

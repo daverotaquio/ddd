@@ -5,11 +5,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
-using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Entities.UserEntity;
-using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure.Repositories.Interface;
+using TradingEngine.Models.UserEntity;
+using TradingEngine.Models.ValueObjects;
+using TradingEngine.Models.WalletEntity;
 
 namespace TradingEngine.Requests.Query
 {

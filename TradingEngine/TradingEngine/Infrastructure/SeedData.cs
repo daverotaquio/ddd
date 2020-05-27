@@ -2,12 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
-using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Entities.AccountHistoryEntity;
-using TradingEngine.Entities.CurrencyEntity;
-using TradingEngine.Entities.UserEntity;
-using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Infrastructure.Context;
+using TradingEngine.Models.AccountHistoryEntity;
+using TradingEngine.Models.CurrencyEntity;
+using TradingEngine.Models.UserEntity;
+using TradingEngine.Models.ValueObjects;
+using TradingEngine.Models.WalletEntity;
 
 namespace TradingEngine.Infrastructure
 {

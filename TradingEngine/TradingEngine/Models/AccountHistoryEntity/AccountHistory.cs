@@ -1,8 +1,8 @@
 ﻿using System;
-using TradingEngine.Entities.UserEntity;
 using TradingEngine.Infrastructure;
+using TradingEngine.Models.UserEntity;
 
-namespace TradingEngine.Entities.AccountHistoryEntity
+namespace TradingEngine.Models.AccountHistoryEntity
 {
     public class AccountHistory : Entity
     {

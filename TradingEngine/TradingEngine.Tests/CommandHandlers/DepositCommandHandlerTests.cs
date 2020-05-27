@@ -7,10 +7,10 @@ using FluentAssertions;
 using Moq;
 using NUnit.Framework;
 using TradingEngine.Constants;
-using TradingEngine.Entities.CurrencyEntity;
-using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure.Repositories.Interface;
+using TradingEngine.Models.CurrencyEntity;
+using TradingEngine.Models.WalletEntity;
 using TradingEngine.Requests.Commands;
 
 namespace TradingEngine.Tests.CommandHandlers

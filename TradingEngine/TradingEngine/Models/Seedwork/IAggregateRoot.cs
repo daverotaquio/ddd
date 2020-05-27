@@ -1,4 +1,4 @@
-﻿namespace TradingEngine.Domain.Seedwork
+﻿namespace TradingEngine.Models.Seedwork
 {
     public interface IAggregateRoot { }
 }

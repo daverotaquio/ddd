@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Entities.CurrencyEntity;
-using TradingEngine.Entities.WalletEntity;
+using TradingEngine.Models.CurrencyEntity;
+using TradingEngine.Models.ValueObjects;
+using TradingEngine.Models.WalletEntity;
 
-namespace TradingEngine.Domain.Services
+namespace TradingEngine.Models.Services
 {
     public interface ITransactionService
     {

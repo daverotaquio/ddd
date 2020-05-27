@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using TradingEngine.Domain.Services;
 using TradingEngine.Infrastructure.Context;
 using TradingEngine.Infrastructure.Repositories;
 using TradingEngine.Infrastructure.Repositories.Interface;
+using TradingEngine.Models.Services;
 
 namespace TradingEngine
 {
