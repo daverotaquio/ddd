@@ -3,14 +3,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
-using TradingEngine.Domain.AccountHistoryDomain;
-using TradingEngine.Domain.UserDomain;
 using TradingEngine.Domain.ValueObjects;
+using TradingEngine.Entities.AccountHistoryEntity;
+using TradingEngine.Entities.UserEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure;
 using TradingEngine.Infrastructure.Repositories.Interface;
 
-namespace TradingEngine.Domain.WalletDomain.Events
+namespace TradingEngine.Entities.WalletEntity.Events
 {
     public class WalletCreated : Event
     {

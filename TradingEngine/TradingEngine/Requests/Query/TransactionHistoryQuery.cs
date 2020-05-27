@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
-using TradingEngine.Domain.AccountHistoryDomain;
+using TradingEngine.Entities.AccountHistoryEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure.Repositories.Interface;
 

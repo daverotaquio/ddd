@@ -3,9 +3,9 @@ using AutoFixture;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using TradingEngine.Domain.UserDomain;
-using TradingEngine.Domain.UserDomain.Events;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.UserEntity;
+using TradingEngine.Entities.UserEntity.Events;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure.Repositories.Interface;
 

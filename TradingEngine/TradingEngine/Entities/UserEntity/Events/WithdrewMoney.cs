@@ -3,15 +3,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
-using TradingEngine.Domain.AccountHistoryDomain;
-using TradingEngine.Domain.CurrencyDomain;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.AccountHistoryEntity;
+using TradingEngine.Entities.CurrencyEntity;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure;
 using TradingEngine.Infrastructure.Repositories.Interface;
 
-namespace TradingEngine.Domain.UserDomain.Events
+namespace TradingEngine.Entities.UserEntity.Events
 {
     public class WithdrewMoney : Event
     {

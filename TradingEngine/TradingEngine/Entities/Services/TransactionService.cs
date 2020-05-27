@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using TradingEngine.Domain.CurrencyDomain;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.CurrencyEntity;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Infrastructure.Repositories.Interface;
 
 namespace TradingEngine.Domain.Services

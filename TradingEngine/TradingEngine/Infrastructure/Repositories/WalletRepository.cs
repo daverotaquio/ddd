@@ -1,4 +1,4 @@
-﻿using TradingEngine.Domain.WalletDomain;
+﻿using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Infrastructure.Context;
 using TradingEngine.Infrastructure.Repositories.Base;
 using TradingEngine.Infrastructure.Repositories.Interface;

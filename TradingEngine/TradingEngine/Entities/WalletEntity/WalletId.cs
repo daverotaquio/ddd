@@ -1,7 +1,7 @@
 ﻿using System;
 using TradingEngine.Infrastructure;
 
-namespace TradingEngine.Domain.WalletDomain
+namespace TradingEngine.Entities.WalletEntity
 {
     public class WalletId : ValueObject<WalletId>
     {

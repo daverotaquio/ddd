@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
-using TradingEngine.Domain.AccountHistoryDomain;
-using TradingEngine.Domain.CurrencyDomain;
-using TradingEngine.Domain.UserDomain;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.AccountHistoryEntity;
+using TradingEngine.Entities.CurrencyEntity;
+using TradingEngine.Entities.UserEntity;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Infrastructure.Context;
 
 namespace TradingEngine.Infrastructure

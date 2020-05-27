@@ -1,4 +1,4 @@
-﻿using TradingEngine.Domain.UserDomain;
+﻿using TradingEngine.Entities.UserEntity;
 using TradingEngine.Infrastructure.Context;
 using TradingEngine.Infrastructure.Repositories.Base;
 using TradingEngine.Infrastructure.Repositories.Interface;

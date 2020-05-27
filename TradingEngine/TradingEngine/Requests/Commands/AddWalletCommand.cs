@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure.Repositories.Interface;
 

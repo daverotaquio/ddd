@@ -1,4 +1,4 @@
-﻿using TradingEngine.Domain.CurrencyDomain;
+﻿using TradingEngine.Entities.CurrencyEntity;
 using TradingEngine.Infrastructure.Context;
 using TradingEngine.Infrastructure.Repositories.Base;
 using TradingEngine.Infrastructure.Repositories.Interface;

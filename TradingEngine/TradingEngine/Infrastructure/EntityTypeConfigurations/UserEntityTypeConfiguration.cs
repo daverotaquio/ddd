@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TradingEngine.Domain.UserDomain;
 using TradingEngine.Domain.ValueObjects;
+using TradingEngine.Entities.UserEntity;
 
 namespace TradingEngine.Infrastructure.EntityTypeConfigurations
 {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using TradingEngine.Domain.CurrencyDomain;
+using TradingEngine.Entities.CurrencyEntity;
 using TradingEngine.Infrastructure.Repositories.Interface;
 
 namespace TradingEngine.Requests.Query

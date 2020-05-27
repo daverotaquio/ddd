@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.WalletEntity;
 
 namespace TradingEngine.Infrastructure.EntityTypeConfigurations
 {

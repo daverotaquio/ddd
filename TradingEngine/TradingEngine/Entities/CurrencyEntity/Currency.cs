@@ -1,7 +1,7 @@
 ﻿using TradingEngine.Domain.ValueObjects;
 using TradingEngine.Infrastructure;
 
-namespace TradingEngine.Domain.CurrencyDomain
+namespace TradingEngine.Entities.CurrencyEntity
 {
     public class Currency : Entity
     {

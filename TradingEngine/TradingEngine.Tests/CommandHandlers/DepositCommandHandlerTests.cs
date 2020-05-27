@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using AutoFixture;
@@ -9,11 +7,9 @@ using FluentAssertions;
 using Moq;
 using NUnit.Framework;
 using TradingEngine.Constants;
-using TradingEngine.Domain.CurrencyDomain;
-using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.CurrencyEntity;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Exceptions;
-using TradingEngine.Extensions;
 using TradingEngine.Infrastructure.Repositories.Interface;
 using TradingEngine.Requests.Commands;
 

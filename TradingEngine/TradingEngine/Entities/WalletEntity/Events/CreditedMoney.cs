@@ -3,56 +3,57 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using TradingEngine.Constants;
-using TradingEngine.Domain.AccountHistoryDomain;
-using TradingEngine.Domain.CurrencyDomain;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.AccountHistoryEntity;
+using TradingEngine.Entities.CurrencyEntity;
+using TradingEngine.Entities.UserEntity;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure;
 using TradingEngine.Infrastructure.Repositories.Interface;
 
-namespace TradingEngine.Domain.UserDomain.Events
+namespace TradingEngine.Entities.WalletEntity.Events
 {
-    public class DepositedMoney : Event
+    public class CreditedMoney : Event
     {
         public int Id { get; set; }
         public decimal Amount { get; set; }
-        public int UserId { get; set; }
+        public int ToUserId { get; set; }
+        public int FromUserId { get; set; }
         public Currency Currency { get; set; }
     }
 
-    public class DepositedMoneyEventHandler : INotificationHandler<DepositedMoney>
+    public class CreditedMoneyEventHandler : INotificationHandler<CreditedMoney>
     {
         private readonly IWalletRepository _walletRepository;
         private readonly IAccountHistoryRepository _accountHistoryRepository;
         private readonly IUserRepository _userRepository;
 
-        public DepositedMoneyEventHandler(IWalletRepository walletRepository, IAccountHistoryRepository accountHistoryRepository, IUserRepository userRepository)
+        public CreditedMoneyEventHandler(IWalletRepository walletRepository, IAccountHistoryRepository accountHistoryRepository, IUserRepository userRepository)
         {
             _walletRepository = walletRepository;
             _accountHistoryRepository = accountHistoryRepository;
             _userRepository = userRepository;
         }
 
-        public async Task Handle(DepositedMoney notification, CancellationToken cancellationToken)
+        public async Task Handle(CreditedMoney notification, CancellationToken cancellationToken)
         {
             Wallet wallet = _walletRepository.GetById(notification.EntityId);
 
-            User user = _userRepository.GetById(notification.UserId);
+            User fromUser = _userRepository.GetById(notification.FromUserId);
 
             wallet.MustNotBeNull(ex: new WalletNotFoundException(ExceptionMessage.WalletNotFoundExceptionMessage));
-            user.MustNotBeNull(ex: new UserNotFoundException(ExceptionMessage.UserNotFoundExceptionMessage));
+            fromUser.MustNotBeNull(ex: new UserNotFoundException(ExceptionMessage.UserNotFoundExceptionMessage));
 
-            var depositedMoney = new Money(notification.Amount);
+            var creditedMoney = new Money(notification.Amount);
             Money originalDepositedMoney = notification.Currency.OriginalMoneyValue();
 
             var accountHistory = new AccountHistory(
-                notification.UserId,
+                notification.ToUserId,
                 DateTime.Now,
                 notification.Currency.Key == CurrencySettings.DefaultCurrencyKey ?
-                    $"{user.Name} deposited {depositedMoney}. Total account balance is {wallet.Balance}." :
-                    $"{user.Name} deposited {notification.Currency.Key} {originalDepositedMoney.Value:#.00} or {depositedMoney}. Total account balance is {wallet.Balance}."
-                );
+                    $"{creditedMoney} has been credited to your account from {fromUser.Name}. New account balance is {wallet.Balance}." :
+                    $"{notification.Currency.Key} {originalDepositedMoney.Value:#.00} or {creditedMoney} has been credited to your account from {fromUser.Name}. New account balance is {wallet.Balance}."
+            );
 
             _accountHistoryRepository.Add(accountHistory);
 

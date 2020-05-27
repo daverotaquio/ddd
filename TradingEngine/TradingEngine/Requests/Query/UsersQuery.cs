@@ -5,9 +5,9 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using TradingEngine.Domain.UserDomain;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain;
+using TradingEngine.Entities.UserEntity;
+using TradingEngine.Entities.WalletEntity;
 using TradingEngine.Infrastructure.Repositories.Interface;
 
 namespace TradingEngine.Requests.Query

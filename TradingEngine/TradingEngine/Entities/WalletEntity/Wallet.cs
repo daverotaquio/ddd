@@ -1,15 +1,15 @@
 ﻿using System;
 using TradingEngine.Constants;
-using TradingEngine.Domain.CurrencyDomain;
 using TradingEngine.Domain.Seedwork;
-using TradingEngine.Domain.UserDomain;
-using TradingEngine.Domain.UserDomain.Events;
 using TradingEngine.Domain.ValueObjects;
-using TradingEngine.Domain.WalletDomain.Events;
+using TradingEngine.Entities.CurrencyEntity;
+using TradingEngine.Entities.UserEntity;
+using TradingEngine.Entities.UserEntity.Events;
+using TradingEngine.Entities.WalletEntity.Events;
 using TradingEngine.Exceptions;
 using TradingEngine.Infrastructure;
 
-namespace TradingEngine.Domain.WalletDomain
+namespace TradingEngine.Entities.WalletEntity
 {
     public class Wallet : Entity, IAggregateRoot
     {

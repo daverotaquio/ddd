@@ -1,4 +1,4 @@
-﻿using TradingEngine.Domain.AccountHistoryDomain;
+﻿using TradingEngine.Entities.AccountHistoryEntity;
 using TradingEngine.Infrastructure.Context;
 using TradingEngine.Infrastructure.Repositories.Base;
 using TradingEngine.Infrastructure.Repositories.Interface;
